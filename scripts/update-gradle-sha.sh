@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Pins distributionSha256Sum in gradle-wrapper.properties to the official
-# checksum published by Gradle for the current distributionUrl.
 set -euo pipefail
 
 PROPS="$(dirname "$0")/../gradle/wrapper/gradle-wrapper.properties"
