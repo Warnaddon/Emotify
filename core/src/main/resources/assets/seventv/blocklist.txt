@@ -1,0 +1,44 @@
+# Built-in emote NAME blocklist for the 7TV addon.
+# One word per line, case-insensitive, matched as a substring of the emote name.
+# This is a last line of defence on top of 7TV's own content flags (sexual content is ALWAYS
+# blocked via the flag, regardless of this list). Add your own words in the addon settings
+# instead of editing this file, so updates don't overwrite them.
+# Keep entries fairly specific - very short words cause false positives (e.g. "ass" would block "Bass").
+nsfw
+porn
+porno
+hentai
+ecchi
+ahegao
+lewd
+nude
+nudes
+naked
+boob
+boobs
+tits
+titty
+titties
+nipple
+dick
+dicks
+cock
+cocks
+penis
+pussy
+vagina
+cum
+cumming
+fap
+horny
+sex
+sexy
+sexual
+xxx
+blowjob
+handjob
+dildo
+fetish
+bdsm
+orgasm
+onlyfans

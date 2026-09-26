@@ -1,0 +1,136 @@
+{
+  "seventv": {
+    "settings": {
+      "name": "Emotify",
+      "enabled": { "name": "Aktiviert" },
+      "language": {
+        "name": "Sprache",
+        "description": "Sprache für Picker, Chat-Texte, Befehle und Benachrichtigungen. Auto folgt der Spielsprache. Das Einstellungsmenü verwendet immer die Spielsprache.",
+        "entries": { "auto": "Auto (Spielsprache)", "danish": "Dänisch", "english": "Englisch", "german": "Deutsch" }
+      },
+      "useGlobalSet": {
+        "name": "Globale 7TV-Emotes",
+        "description": "Lädt das globale 7TV-Emote-Set (PogChamp, KEKW, ...)."
+      },
+      "popularEmotes": {
+        "name": "Beliebte 7TV-Emotes",
+        "description": "Lädt zusätzlich die meistgenutzten Emotes auf 7TV (seitenweit). Mehr Emotes = mehr Auswahl im Picker.",
+        "entries": { "off": "Aus", "top100": "Top 100", "top250": "Top 250", "top500": "Top 500", "top1000": "Top 1000" }
+      },
+      "extraEmoteSets": {
+        "name": "Weitere Emote-Sets",
+        "description": "Kommagetrennt. Emote-Set-IDs, 7tv.app/emote-sets/...-Links, 7tv.app/users/...-Links oder twitch:<Twitch-Benutzer-ID>."
+      },
+      "quality": {
+        "name": "Emote-Qualität",
+        "entries": { "x1": "1x (klein, schnell)", "x2": "2x (scharf)" }
+      },
+      "animated": {
+        "name": "Animierte Emotes",
+        "description": "Animierte Emotes abspielen. Aus zeigt nur das erste Bild und spart Speicher."
+      },
+      "caseInsensitive": {
+        "name": "Groß-/Kleinschreibung ignorieren",
+        "description": ":pogchamp: findet auch PogChamp."
+      },
+      "maxEmotesPerMessage": {
+        "name": "Max. Emotes pro Nachricht",
+        "description": "Alles darüber bleibt normaler Text. Verhindert Emote-Spam."
+      },
+      "maxCachedEmotes": {
+        "name": "Textur-Cache",
+        "description": "Wie viele Emote-Bilder geladen bleiben. Alte werden automatisch freigegeben."
+      },
+      "pickerKey": {
+        "name": "Taste für Emote-Auswahl",
+        "description": "Öffnet die Emote-Auswahl im Spiel (nicht bei offenem Chat). Standard: V."
+      },
+      "insertMode": {
+        "name": "Beim Auswählen eines Emotes",
+        "entries": { "send": "Sofort im Chat senden", "openChat": "Chat mit :Name: öffnen", "clipboard": ":Name: in Zwischenablage kopieren" }
+      },
+      "tabCompletion": {
+        "name": "TAB-Vervollständigung",
+        "description": ":po eingeben und TAB drücken, um den Namen zu vervollständigen. Erneut TAB wechselt."
+      },
+      "reloadEmotes": {
+        "name": "Emotes neu laden",
+        "text": "Neu laden"
+      },
+      "filter": {
+        "name": "Inhaltsfilter",
+        "description": "Sexuelle Inhalte werden IMMER blockiert. Diese Optionen steuern die übrigen Stufen.",
+        "blockEdgy": { "name": "Anstößige Emotes blockieren" },
+        "blockEpilepsy": { "name": "Blinkende (Epilepsie) Emotes blockieren" },
+        "blockTwitchDisallowed": { "name": "Auf Twitch verbotene Emotes blockieren" },
+        "blockUnlisted": {
+          "name": "Ungelistete Emotes blockieren",
+          "description": "Ungelistete Emotes wurden nie von 7TV moderiert. Sollte an bleiben."
+        },
+        "blockZeroWidth": { "name": "Zero-Width (Overlay) Emotes blockieren" },
+        "useBuiltInBlocklist": {
+          "name": "Eingebaute Wortliste",
+          "description": "Blockiert zusätzlich Emotes, deren Name ein Wort der mitgelieferten NSFW-Liste enthält."
+        },
+        "customBlocklist": {
+          "name": "Zusätzlich blockierte Wörter",
+          "description": "Kommagetrennt. Emotes, deren Name eines dieser Wörter enthält, werden versteckt."
+        },
+        "customAllowlist": {
+          "name": "Immer erlauben (exakte Namen)",
+          "description": "Kommagetrennte Emote-Namen, die die Wortlisten umgehen (nie die Flag-Prüfungen)."
+        }
+      },
+      "header": {
+        "sources": { "name": "Emote-Quellen" },
+        "rendering": { "name": "Darstellung" },
+        "picker": { "name": "Auswahl & Eingabe" },
+        "filter": { "name": "Sicherheit" }
+      }
+    },
+    "picker": {
+      "title": "Emotify",
+      "search": "Emotes suchen...",
+      "count": "%s Emotes geladen",
+      "results": "%s von %s Emotes",
+      "close": "Schließen (Esc)",
+      "recent": "Zuletzt verwendet",
+      "all": "Alle Emotes",
+      "noResults": "Kein Emote für \"%s\" gefunden.",
+      "noEmotesLoaded": "Noch keine Emotes geladen. Prüfe deine Internetverbindung oder die Emote-Quellen in den Einstellungen.",
+      "hint": "Klicke auf ein Emote, um es in den Chat einzufügen  •  Enter wählt den ersten Treffer  •  Esc schließt",
+      "showMore": "%s weitere anzeigen (%s übrig)",
+      "noEmotesInTab": "Keine Emotes in diesem Tab.",
+      "tab": { "all": "Alle", "animated": "GIF", "static": "Statisch" },
+      "closeButton": "X",
+      "credit": "Emotes und Grafiken © 7TV und ihre jeweiligen Ersteller. Emotify steht in keiner Verbindung zu 7TV.",
+      "copied": "%s in die Zwischenablage kopiert"
+    },
+    "set": { "global": "Global", "popular": "Beliebt" },
+    "chat": {
+      "hover": {
+        "set": "Set: %s",
+        "by": "Von %s"
+      }
+    },
+    "command": {
+      "info": {
+        "loaded": "%s Emotes aus %s Set(s) geladen:",
+        "blocked": "%s Emotes vom Inhaltsfilter versteckt:",
+        "textures": "%s Emote-Texturen aktuell geladen.",
+        "usage": "Nutzung: /7tv reload | /7tv search <Name> | /7tv picker",
+        "reason": { "sexual": "sexueller Inhalt", "unlisted": "nicht gelistet", "edgy": "anstößig", "epilepsy": "blinkend (Epilepsie)", "twitch_disallowed": "auf Twitch nicht erlaubt", "zero_width": "Zero-Width", "private": "privat", "word_list": "Wortliste" }
+      },
+      "disabled": "Das Addon ist in den Einstellungen deaktiviert.",
+      "search": {
+        "usage": "Nutzung: /7tv search <Name>",
+        "none": "Kein Emote gefunden.",
+        "results": "%s Treffer - klicken zum Einfügen:"
+      }
+    },
+    "notification": {
+      "reloaded": "%s Emotes aus %s Set(s) geladen.",
+      "failed": "%s Set(s) konnten nicht geladen werden."
+    }
+  }
+}
