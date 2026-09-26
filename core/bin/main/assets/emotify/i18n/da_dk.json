@@ -1,0 +1,136 @@
+{
+  "emotify": {
+    "settings": {
+      "name": "Emotify",
+      "enabled": { "name": "Aktiveret" },
+      "language": {
+        "name": "Sprog",
+        "description": "Sprog for vælgeren, chat-tekster, kommandoer og notifikationer. Auto følger spillets sprog. Indstillingsmenuen bruger altid spillets sprog.",
+        "entries": { "auto": "Auto (spillets sprog)", "danish": "Dansk", "english": "Engelsk", "german": "Tysk" }
+      },
+      "useGlobalSet": {
+        "name": "Globale 7TV-emotes",
+        "description": "Indlæs det globale 7TV-emotesæt (PogChamp, KEKW, ...)."
+      },
+      "popularEmotes": {
+        "name": "Populære 7TV-emotes",
+        "description": "Indlæser også de mest brugte emotes på 7TV (hele sitet). Flere emotes = mere at vælge imellem i vælgeren.",
+        "entries": { "off": "Fra", "top100": "Top 100", "top250": "Top 250", "top500": "Top 500", "top1000": "Top 1000" }
+      },
+      "extraEmoteSets": {
+        "name": "Ekstra emotesæt",
+        "description": "Kommasepareret. Emotesæt-ID'er, 7tv.app/emote-sets/...-links, 7tv.app/users/...-links eller twitch:<Twitch bruger-id>."
+      },
+      "quality": {
+        "name": "Emote-kvalitet",
+        "entries": { "x1": "1x (lille, hurtig)", "x2": "2x (skarp)" }
+      },
+      "animated": {
+        "name": "Animerede emotes",
+        "description": "Afspil animerede emotes. Slået fra viser kun første billede og sparer hukommelse."
+      },
+      "caseInsensitive": {
+        "name": "Ignorér store/små bogstaver",
+        "description": ":pogchamp: matcher også PogChamp."
+      },
+      "maxEmotesPerMessage": {
+        "name": "Maks. emotes pr. besked",
+        "description": "Flere end dette vises som almindelig tekst. Stopper emote-spam."
+      },
+      "maxCachedEmotes": {
+        "name": "Texture-cache",
+        "description": "Hvor mange emote-billeder der holdes indlæst. Gamle frigives automatisk."
+      },
+      "pickerKey": {
+        "name": "Tast til emote-vælger",
+        "description": "Åbner emote-vælgeren mens du spiller (ikke mens chatten er åben). Standard: V."
+      },
+      "insertMode": {
+        "name": "Når en emote vælges",
+        "entries": { "send": "Send den i chatten med det samme", "openChat": "Åbn chat med :Navn:", "clipboard": "Kopiér :Navn: til udklipsholder" }
+      },
+      "tabCompletion": {
+        "name": "TAB-fuldførelse",
+        "description": "Skriv :po og tryk TAB i chatten for at fuldføre navnet. TAB igen skifter forslag."
+      },
+      "reloadEmotes": {
+        "name": "Genindlæs emotes",
+        "text": "Genindlæs"
+      },
+      "filter": {
+        "name": "Indholdsfilter",
+        "description": "Seksuelt indhold blokeres ALTID. Disse styrer de øvrige lag.",
+        "blockEdgy": { "name": "Blokér grove/stødende emotes" },
+        "blockEpilepsy": { "name": "Blokér blinkende (epilepsi) emotes" },
+        "blockTwitchDisallowed": { "name": "Blokér Twitch-forbudte emotes" },
+        "blockUnlisted": {
+          "name": "Blokér ikke-listede emotes",
+          "description": "Ikke-listede emotes er aldrig modereret af 7TV. Lad denne være slået til."
+        },
+        "blockZeroWidth": { "name": "Blokér zero-width (overlay) emotes" },
+        "useBuiltInBlocklist": {
+          "name": "Indbygget ordliste",
+          "description": "Blokerer også emotes hvis navn indeholder et ord fra den indbyggede NSFW-liste."
+        },
+        "customBlocklist": {
+          "name": "Ekstra blokerede ord",
+          "description": "Kommasepareret. Emotes hvis navn indeholder et af disse ord skjules."
+        },
+        "customAllowlist": {
+          "name": "Tillad altid (præcise navne)",
+          "description": "Kommasepareret liste af emote-navne der går uden om ordlisterne (aldrig flag-tjekkene)."
+        }
+      },
+      "header": {
+        "sources": { "name": "Emote-kilder" },
+        "rendering": { "name": "Visning" },
+        "picker": { "name": "Vælger & input" },
+        "filter": { "name": "Sikkerhed" }
+      }
+    },
+    "picker": {
+      "title": "Emotify",
+      "search": "Søg efter emotes...",
+      "count": "%s emotes indlæst",
+      "results": "%s af %s emotes",
+      "close": "Luk (Esc)",
+      "recent": "Senest brugt",
+      "all": "Alle emotes",
+      "noResults": "Ingen emote fundet for \"%s\".",
+      "noEmotesLoaded": "Ingen emotes indlæst endnu. Tjek din internetforbindelse eller emote-kilderne i indstillingerne.",
+      "hint": "Klik på en emote for at indsætte den i chatten  •  Enter vælger første match  •  Esc lukker",
+      "showMore": "Vis %s mere (%s tilbage)",
+      "noEmotesInTab": "Ingen emotes i denne fane.",
+      "tab": { "all": "Alle", "animated": "GIF", "static": "Statiske" },
+      "closeButton": "X",
+      "credit": "Emotes og grafik © 7TV og deres respektive skabere. Emotify er ikke tilknyttet 7TV.",
+      "copied": "%s kopieret til udklipsholderen"
+    },
+    "set": { "global": "Global", "popular": "Populære" },
+    "chat": {
+      "hover": {
+        "set": "Sæt: %s",
+        "by": "Af %s"
+      }
+    },
+    "command": {
+      "info": {
+        "loaded": "%s emotes indlæst fra %s sæt:",
+        "blocked": "%s emotes skjult af indholdsfilteret:",
+        "textures": "%s emote-textures indlæst lige nu.",
+        "usage": "Brug: /7tv reload | /7tv search <navn> | /7tv picker",
+        "reason": { "sexual": "seksuelt indhold", "unlisted": "ikke listet", "edgy": "grov / stødende", "epilepsy": "blinkende (epilepsi)", "twitch_disallowed": "ikke tilladt på Twitch", "zero_width": "zero-width", "private": "privat", "word_list": "ordliste" }
+      },
+      "disabled": "Addon'en er slået fra i indstillingerne.",
+      "search": {
+        "usage": "Brug: /7tv search <navn>",
+        "none": "Ingen emote fundet.",
+        "results": "%s resultat(er) - klik for at indsætte:"
+      }
+    },
+    "notification": {
+      "reloaded": "%s emotes indlæst fra %s sæt.",
+      "failed": "%s sæt kunne ikke indlæses."
+    }
+  }
+}
