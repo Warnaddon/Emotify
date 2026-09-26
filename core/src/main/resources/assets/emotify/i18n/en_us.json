@@ -1,0 +1,136 @@
+{
+  "emotify": {
+    "settings": {
+      "name": "Emotify",
+      "enabled": { "name": "Enabled" },
+      "language": {
+        "name": "Language",
+        "description": "Language of the picker, chat texts, commands and notifications. Auto follows the game language. The settings screen always uses the game language.",
+        "entries": { "auto": "Auto (game language)", "danish": "Danish", "english": "English", "german": "German" }
+      },
+      "useGlobalSet": {
+        "name": "Global 7TV emotes",
+        "description": "Load the global 7TV emote set (PogChamp, KEKW, ...)."
+      },
+      "popularEmotes": {
+        "name": "Popular 7TV emotes",
+        "description": "Also loads the most used emotes on 7TV (site wide). More emotes = more to browse in the picker.",
+        "entries": { "off": "Off", "top100": "Top 100", "top250": "Top 250", "top500": "Top 500", "top1000": "Top 1000" }
+      },
+      "extraEmoteSets": {
+        "name": "Extra emote sets",
+        "description": "Comma separated. Emote set IDs, 7tv.app/emote-sets/... links, 7tv.app/users/... links or twitch:<Twitch user id>."
+      },
+      "quality": {
+        "name": "Emote quality",
+        "entries": { "x1": "1x (small, fast)", "x2": "2x (sharp)" }
+      },
+      "animated": {
+        "name": "Animated emotes",
+        "description": "Play animated emotes. Off shows only the first frame and saves memory."
+      },
+      "caseInsensitive": {
+        "name": "Ignore case",
+        "description": ":pogchamp: also matches PogChamp."
+      },
+      "maxEmotesPerMessage": {
+        "name": "Max emotes per message",
+        "description": "More tokens than this stay as plain text. Stops emote spam walls."
+      },
+      "maxCachedEmotes": {
+        "name": "Texture cache size",
+        "description": "How many emote images stay loaded. Older ones are freed automatically."
+      },
+      "pickerKey": {
+        "name": "Emote picker key",
+        "description": "Opens the emote picker while playing (not while chat is open). Default: V."
+      },
+      "insertMode": {
+        "name": "When an emote is picked",
+        "entries": { "send": "Send it in chat right away", "openChat": "Open chat with :Name:", "clipboard": "Copy :Name: to clipboard" }
+      },
+      "tabCompletion": {
+        "name": "TAB completion",
+        "description": "Type :po and press TAB in chat to complete the emote name. TAB again cycles."
+      },
+      "reloadEmotes": {
+        "name": "Reload emotes",
+        "text": "Reload"
+      },
+      "filter": {
+        "name": "Content filter",
+        "description": "Sexual content is ALWAYS blocked. These control the remaining layers.",
+        "blockEdgy": { "name": "Block edgy / offensive emotes" },
+        "blockEpilepsy": { "name": "Block flashing (epilepsy) emotes" },
+        "blockTwitchDisallowed": { "name": "Block Twitch-disallowed emotes" },
+        "blockUnlisted": {
+          "name": "Block unlisted emotes",
+          "description": "Unlisted emotes never went through 7TV moderation. Keep this on."
+        },
+        "blockZeroWidth": { "name": "Block zero-width (overlay) emotes" },
+        "useBuiltInBlocklist": {
+          "name": "Built-in word list",
+          "description": "Also blocks emotes whose name contains a word from the bundled NSFW list."
+        },
+        "customBlocklist": {
+          "name": "Extra blocked words",
+          "description": "Comma separated. Emotes whose name contains one of these are hidden."
+        },
+        "customAllowlist": {
+          "name": "Always allow (exact names)",
+          "description": "Comma separated emote names that bypass the word lists (never the flag checks)."
+        }
+      },
+      "header": {
+        "sources": { "name": "Emote sources" },
+        "rendering": { "name": "Rendering" },
+        "picker": { "name": "Picker & input" },
+        "filter": { "name": "Safety" }
+      }
+    },
+    "picker": {
+      "title": "Emotify",
+      "search": "Search emotes...",
+      "count": "%s emotes loaded",
+      "results": "%s of %s emotes",
+      "close": "Close (Esc)",
+      "recent": "Recently used",
+      "all": "All emotes",
+      "noResults": "No emote found for \"%s\".",
+      "noEmotesLoaded": "No emotes loaded yet. Check your internet connection or the emote sources in the settings.",
+      "hint": "Click an emote to insert it into chat  •  Enter picks the first match  •  Esc closes",
+      "showMore": "Show %s more (%s left)",
+      "noEmotesInTab": "No emotes in this tab.",
+      "tab": { "all": "All", "animated": "GIF", "static": "Static" },
+      "closeButton": "X",
+      "credit": "Emotes and artwork © 7TV and their respective creators. Emotify is not affiliated with 7TV.",
+      "copied": "%s copied to clipboard"
+    },
+    "set": { "global": "Global", "popular": "Popular" },
+    "chat": {
+      "hover": {
+        "set": "Set: %s",
+        "by": "By %s"
+      }
+    },
+    "command": {
+      "info": {
+        "loaded": "%s emotes loaded from %s set(s):",
+        "blocked": "%s emotes hidden by the content filter:",
+        "textures": "%s emote textures currently loaded.",
+        "usage": "Usage: /7tv reload | /7tv search <name> | /7tv picker",
+        "reason": { "sexual": "sexual content", "unlisted": "unlisted", "edgy": "edgy / offensive", "epilepsy": "flashing (epilepsy)", "twitch_disallowed": "Twitch-disallowed", "zero_width": "zero-width", "private": "private", "word_list": "word list" }
+      },
+      "disabled": "Addon is disabled in the settings.",
+      "search": {
+        "usage": "Usage: /7tv search <name>",
+        "none": "No emote found.",
+        "results": "%s result(s) - click to insert:"
+      }
+    },
+    "notification": {
+      "reloaded": "%s emotes loaded from %s set(s).",
+      "failed": "%s set(s) could not be loaded."
+    }
+  }
+}

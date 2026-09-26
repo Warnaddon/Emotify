@@ -9,21 +9,19 @@ group = "dk.codestack"
 version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
 labyMod {
-    defaultPackageName = "dk.codestack.seventv"
+    defaultPackageName = "dk.codestack.emotify"
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
             runs {
                 getByName("client") {
-                    // Set to true to log in with a real Minecraft account in the dev client.
-                    // devLogin = true
                 }
             }
         }
     }
 
     addonInfo {
-        namespace = "seventv"
+        namespace = "emotify"
         displayName = "Emotify"
         author = "Code Stack"
         description = "Type :emoteName: in chat and see 7TV emotes rendered inline. Global + popular + custom emote sets, NSFW filter, emote picker (default key: V). Emotes and artwork belong to 7TV and their creators."

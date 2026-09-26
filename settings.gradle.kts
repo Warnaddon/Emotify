@@ -1,5 +1,4 @@
-// The root project name MUST match the addon namespace (required for mixins / release jar naming).
-rootProject.name = "seventv"
+rootProject.name = "emotify"
 
 pluginManagement {
     repositories {

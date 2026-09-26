@@ -3,7 +3,7 @@
 Type `:PogChamp:` in any Minecraft chat and every player with the addon sees the real 7TV emote.
 Press **V** (changeable only under *ESC → LabyMod Settings → Emotify*) to open the emote picker.
 
-Namespace `seventv` · package `dk.codestack.seventv` · Minecraft 1.8.9 → 26.3 (every version LabyMod 4 ships).
+Namespace `emotify` · package `dk.codestack.emotify` · Minecraft 1.8.9 → 26.3 (every version LabyMod 4 ships).
 
 ## How it works
 
@@ -18,7 +18,7 @@ Namespace `seventv` · package `dk.codestack.seventv` · Minecraft 1.8.9 → 26.
 | `ChatEmoteListener` | `ChatReceiveEvent` (priority 125): fast `indexOf(':')` bail-out, then rebuilds the component tree replacing `:name:` tokens with `Component.icon(...)` + hover (name, set, author). Max N emotes per message. |
 | `EmoteTabCompleter` | `:po` + TAB → `:PogChamp: `, TAB again cycles. Only for tokens starting with `:`; commands are untouched. |
 | `EmotePickerActivity` / `EmotePickerOpener` | The V key: search box, "recently used" row, grid of all emotes. Click (or Enter for the first match) closes the picker and opens the chat with `:Name: ` pre-typed, or copies to clipboard (setting). Picker key is ignored while chat/any screen is open, so typing "v" never triggers it. |
-| `SevenTvCommand` | `/7tv` (info + filter stats), `/7tv reload`, `/7tv search <name>` (clickable results), `/7tv picker`. |
+| `EmotifyCommand` | `/7tv` (info + filter stats), `/7tv reload`, `/7tv search <name>` (clickable results), `/7tv picker`. |
 
 **Important:** what you *send* is never modified. Your message goes to the server as the plain text
 `:PogChamp:`; only clients with the addon render it. Server-side chat filters keep working.
@@ -30,7 +30,7 @@ Namespace `seventv` · package `dk.codestack.seventv` · Minecraft 1.8.9 → 26.
 2. **7TV moderation flags** – `sexual` (bit 16) is **always blocked, no switch**. `edgy` (bit 18),
    `epilepsy` (bit 17), `twitch-disallowed` (bit 24), `private` and **unlisted** (never moderated by
    7TV) are blocked by default.
-3. **Word lists** – bundled `assets/seventv/blocklist.txt` + the user's own words, matched
+3. **Word lists** – bundled `assets/emotify/blocklist.txt` + the user's own words, matched
    CamelCase-aware (`cum` hits `peepoCum`, not `Cucumber`). Exact-name allowlist for false positives
    (never bypasses layer 2).
 4. **Spam cap** – max emotes per message (default 10), max image size 4 MB, texture cache limit.
@@ -41,7 +41,7 @@ Filtered counts per reason are shown by `/7tv`.
 
 ```bash
 ./gradlew build            # dev build
-./gradlew createReleaseJar # build/libs/seventv-<version>-release.jar
+./gradlew createReleaseJar # build/libs/emotify-<version>-release.jar
 ./gradlew runClient1.21.11 # dev client (see `./gradlew tasks` for all versions)
 ```
 
@@ -60,7 +60,7 @@ replacement is a one-liner:
 |---|---|---|
 | `TranslatableComponent` (`getKey()`, `getArguments()`) and `Component.translatable(key, Component...)` | `ChatEmoteListener.transform` | Delete the `instanceof TranslatableComponent` branch – translatable messages then simply aren't scanned. |
 | `Component#hoverEvent(HoverEvent.showText(...))` | `ChatEmoteListener.emoteComponent` | Use `Style.builder().hoverEvent(...)` + `.style(...)`, or drop the hover. |
-| `Component#clickEvent(ClickEvent.suggestCommand(...))` | `SevenTvCommand.search` | Same as above with `ClickEvent.Action.SUGGEST_COMMAND`. |
+| `Component#clickEvent(ClickEvent.suggestCommand(...))` | `EmotifyCommand.search` | Same as above with `ClickEvent.Action.SUGGEST_COMMAND`. |
 | `SamplerDescription.Filter.LINEAR` | `EmoteTexture` | Use `Filter.NEAREST` (used by the minimap addon). |
 | `TextFieldWidget#isFocused()` | `EmotePickerActivity.keyPressed` | Track focus yourself or just let ESC close the picker. |
 | `Notification.Builder#icon(Icon)` | `EmotePickerActivity.pick` | Remove the `.icon(...)` line. |
